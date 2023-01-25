@@ -26,3 +26,7 @@ Route::get('/about', function () {
 Route::get('/services', function () {
     return view('pages.services');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
